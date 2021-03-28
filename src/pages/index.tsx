@@ -16,7 +16,7 @@ export default function IndexPage({items}: Props){
     try{
       const response = await axios({
         method:'POST',
-        url:'http://localhost:3000/api/createCards',
+        url:`${process.env.NEXT_PUBLIC_API_URL}/api/createCards`,
         headers:{
           'Content-Type': 'application/json',
         },
@@ -63,15 +63,15 @@ export default function IndexPage({items}: Props){
           
           <div className={styles.checkbox}>
               <div>
-                <input type="checkbox" id="option1" name="vehicle1" />
+                <input type="checkbox"  name="option1" />
                 <label>Opção 1</label>
               </div>
               <div>
-                <input type="checkbox" id="option1" name="vehicle1" />
+                <input type="checkbox"  name="option2" />
                 <label>Opção 2</label>
               </div>
               <div>
-                <input type="checkbox" id="option1" name="vehicle1" />
+                <input type="checkbox"  name="option3" />
                 <label>Opção 3</label>
               </div>
           
@@ -120,11 +120,11 @@ export default function IndexPage({items}: Props){
         <div className={styles.column}> 
           <div >
             <input 
+              disabled
               type="text" 
               name="text" 
               className={styles.inputLabel}
-              ref={register()} 
-              placeholder="Type a comment...(optional)"
+              placeholder="Type a comment.."
             />
           </div>
 
@@ -143,7 +143,7 @@ export default function IndexPage({items}: Props){
 };
 
 export const getServerSideProps: GetServerSideProps = async () =>{
-  const response = await axios.get('http://localhost:3000/api/boards');
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/boards`);
   const items: List[] = await response.data;
   return {props: {items}}
 };
