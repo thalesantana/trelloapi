@@ -13,16 +13,15 @@ type Props = {
 export default function IndexPage({items}: Props){
   const { register, handleSubmit, errors, reset } = useForm();
   async function onSubmitForm(values: JSON){
-    let config = {
-      method:'POST',
-      url:'http://localhost:3000/api/createCards',
-      headers:{
-        'Content-Type': 'application/json',
-      },
-      data: values,
-    };
     try{
-      const response = await axios(config);
+      const response = await axios({
+        method:'POST',
+        url:'http://localhost:3000/api/createCards',
+        headers:{
+          'Content-Type': 'application/json',
+        },
+        data: values,
+      });
       if(response.status == 200){
         reset()
       }
