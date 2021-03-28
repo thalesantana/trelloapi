@@ -1,0 +1,74 @@
+/*    --dark-blue:#0091fb;
+    --middle-blue:#009bfb;
+    --ligth-blue: #d4eafe;
+*/
+.container{
+    display: grid;
+    position: absolute;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    top: 10%;
+    left: 20%;
+}
+
+.column{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100%;
+    align-items: center;
+}
+.title{
+    color:#0091fb;
+}
+.divInput{
+    display: flex;
+    flex-direction: column;
+}
+.inputLeft{
+    border-style: solid;
+    border-radius: 4px;
+    border-color:#d4eafe;
+    width: 90%;
+    height: 35px;
+}
+.selectInput{
+    display: flex;
+    border-width: 2px;
+    border-radius: 4px;
+    border-color:#d4eafe;
+    width: 100%;
+    height: 42px;
+}
+.inputLabel{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    border-color:#d4eafe;
+    height: 14rem;
+    width: 90%;
+}
+.divButton{
+    display: flex;
+    height: 20%;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+.button{
+    display: flex;
+    font-size: 0.8em;
+    color: white;
+    border: none;
+    background-color:#0091fb;
+    padding: 4% 8%;
+}
+
+.error{
+    color: red;
+}
+
+.checkbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
