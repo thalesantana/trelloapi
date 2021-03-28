@@ -10,7 +10,7 @@ type Props = {
   items: List[]
 }
 
-export default function IndexPage({items}: Props){
+export default function Home({items}: Props){
   const { register, handleSubmit, errors, reset } = useForm();
   async function onSubmitForm(values: JSON){
     try{
