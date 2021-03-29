@@ -6,7 +6,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
     const {method} = req;
     switch (method) {
       case 'GET':
-        fetch('https://api.trello.com/1/boards/QRd8atbf/lists', {
+        fetch('http://api.trello.com/1/boards/QRd8atbf/lists', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
