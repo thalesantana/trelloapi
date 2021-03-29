@@ -12,7 +12,11 @@
     top: 10%;
     left: 20%;
 }
-
+.container input::placeholder { /* Chrome/Opera/Safari */
+    color: #d4eafe;
+    font-size: 0.9em;
+    
+ }
 .column{
     display: grid;
     grid-template-columns: 60% 40%;
@@ -49,6 +53,10 @@
     height: 14rem;
     width: 90%;
 }
+.column:nth-child(3) input::placeholder { /* Chrome/Opera/Safari */
+    position: absolute;
+    
+ }
 .divButton{
     display: flex;
     height: 20%;
@@ -71,4 +79,17 @@
 .checkbox{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    color: #0091fb;
 }
+
+.checkbox input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 10px 10px 10px 10px;
+    padding: initial;
+    border: initial;
+    padding: 100px;
+}
+

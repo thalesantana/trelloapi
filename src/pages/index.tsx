@@ -125,6 +125,7 @@ export default function Home({items}: Props){
               name="text" 
               className={styles.inputLabel}
               placeholder="Type a comment.."
+              id="text"
             />
           </div>
 
