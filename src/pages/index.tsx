@@ -16,7 +16,7 @@ export default function Home({items}: Props){
     try{
       const response = await axios({
         method:'POST',
-        url:'http://localhost:3000/api/createCards',
+        url:'https://localhost:3000/api/createCards',
         headers:{
           'Content-Type': 'application/json',
         },
