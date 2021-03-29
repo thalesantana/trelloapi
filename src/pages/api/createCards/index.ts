@@ -8,7 +8,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
     switch (method) {
       case 'POST':
         const {name, idList,email} = req.body;
-        fetch(`http://api.trello.com/1/cards?key=73af314f1d4579f0ffe6c3604190583c&token=22edae9d846384150bd3822e9067927b8e643c16ee09aa153efc167ad09b3aa2&idList=${idList}&name=${name}&email=${email}`, {
+        fetch(`https://api.trello.com/1/cards?key=73af314f1d4579f0ffe6c3604190583c&token=22edae9d846384150bd3822e9067927b8e643c16ee09aa153efc167ad09b3aa2&idList=${idList}&name=${name}&email=${email}`, {
             method: 'POST'
             })
             .then(response => {
