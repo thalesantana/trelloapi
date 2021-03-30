@@ -72,6 +72,7 @@
     border: none;
     background-color:#0091fb;
     padding: 4% 8%;
+    cursor: pointer;
 }
 
 .error{

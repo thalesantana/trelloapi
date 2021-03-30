@@ -16,7 +16,7 @@ export default function Home({items}: Props){
     try{
       const response = await axios({
         method:'POST',
-        url:'https://localhost:3000/api/createCards',
+        url:'http://localhost:3000/api/createCards',
         headers:{
           'Content-Type': 'application/json',
         },
@@ -125,7 +125,6 @@ export default function Home({items}: Props){
               name="text" 
               className={styles.inputLabel}
               placeholder="Type a comment.."
-              id="text"
             />
           </div>
 
