@@ -29,6 +29,7 @@
 .divInput{
     display: flex;
     flex-direction: column;
+    
 }
 .inputLeft{
     border-style: solid;
@@ -36,6 +37,7 @@
     border-color:#d4eafe;
     width: 90%;
     height: 35px;
+    color: #0091fb;
 }
 .selectInput{
     display: flex;
