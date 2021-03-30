@@ -109,7 +109,7 @@ export default function Home({items}: Props){
             <label className={styles.title}>Select a list to put your card</label>
             <select className={styles.selectInput}  name="idList" ref={register}>
               {items.map((item)=> (
-                <option key={item.id}  value={item.id}>{item.name}</option>
+                <option key={item.id} className={styles.op} value={item.id}>{item.name}</option>
               ))}
             </select>
           </div>
