@@ -16,7 +16,7 @@ export default function Home({items}: Props){
     try{
       const response = await axios({
         method:'POST',
-        url:'http://localhost:3000/api/createCards',
+        url:`${process.env.NEXT_PUBLIC_API_URL}/api/createCards`,
         headers:{
           'Content-Type': 'application/json',
         },
@@ -143,7 +143,7 @@ export default function Home({items}: Props){
 };
 
 export const getServerSideProps: GetServerSideProps = async () =>{
-  const response = await axios.get(`http://localhost:3000/api/boards`);
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/boards`);
   const items: List[] = await response.data;
   return {props: {items}}
 };
