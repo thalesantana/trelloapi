@@ -37,7 +37,6 @@ export default function Home({items}: Props){
         <Head>
             <title>Trello API | Create Card</title>
         </Head>
-
         <div className={styles.column}>
             <div className={styles.divInput}>
               <label className={styles.title}>Name</label>
@@ -144,7 +143,7 @@ export default function Home({items}: Props){
 };
 
 export const getServerSideProps: GetServerSideProps = async () =>{
-  const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/boards`);
+  const response = await axios.get(`http://localhost:3000/api/boards`);
   const items: List[] = await response.data;
   return {props: {items}}
 };

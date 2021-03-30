@@ -6,7 +6,6 @@ export default class MyDocument extends Document{
         return(
             <Html>
                 <Head>
-                    <title>Trello API | Create Card</title>
                 </Head>
                 <body>
                     <Main/>
