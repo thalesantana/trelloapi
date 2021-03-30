@@ -1,4 +1,4 @@
-<h1 align="center">Move.it</h1>
+<h1 align="center">Trello API</h1>
 
 ## Sobre o [Trello API](https://trelloapi.vercel.app/)
 
