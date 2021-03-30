@@ -1,0 +1,22 @@
+{
+    "routes":[
+        {
+            "src": "/",
+            "dest": "/pages/index.tsx"
+        },
+        {
+            "src": "/api/boards",
+            "methods":[
+                "GET"
+            ],
+            "dest": "/pages/index.tsx"
+        },
+        {
+            "src": "/api/createCards",
+            "methods":[
+                "POST"
+            ],
+            "dest": "/pages/index.tsx"
+        }
+    ]
+}
