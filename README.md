@@ -10,7 +10,7 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
-- -[Node.js](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 <br>
 
