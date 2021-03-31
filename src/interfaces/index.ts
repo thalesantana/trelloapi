@@ -7,3 +7,10 @@ export type List = {
     idBoard: string
     subscribed: string
 }
+
+export type LabelList = {
+    id: string,
+    idBoard: string,
+    name: string,
+    color: string
+}
