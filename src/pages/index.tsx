@@ -61,18 +61,18 @@ export default function Home({items}: Props){
          
           
           <div className={styles.checkbox}>
-              <div>
+              <label className={styles.box}>
                 <input type="checkbox"  name="option1" />
-                <label>Opção 1</label>
-              </div>
-              <div>
+                <span>Opção 1</span>
+              </label>
+              <label className={styles.box}>
                 <input type="checkbox"  name="option2" />
-                <label>Opção 2</label>
-              </div>
-              <div>
+                <span>Opção 2</span>
+              </label>
+              <label className={styles.box}>
                 <input type="checkbox"  name="option3" />
-                <label>Opção 3</label>
-              </div>
+                <span>Opção 3</span>
+              </label>
           
             </div>
           
@@ -105,7 +105,7 @@ export default function Home({items}: Props){
               <span className={styles.error}>{errors?.email?.message}</span>
           </div>
           
-          <div>
+          <div className={styles.select}>
             <label className={styles.title}>Select a list to put your card</label>
             <select className={styles.selectInput}  name="idList" ref={register}>
               {items.map((item)=> (
@@ -129,9 +129,14 @@ export default function Home({items}: Props){
 
           <div className={styles.divButton}>
             <div className={styles.tags}>
-
+                <p>Tags</p>
+                <div className={styles.spans}>
+                  <span>web</span>
+                </div>
             </div>
-            <button className={styles.button} type="submit">Enviar</button>
+            <div className={styles.button}>
+              <button  type="submit">Enviar</button>
+            </div>
           </div>
         </div>        
           
