@@ -2,15 +2,16 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head'
 import styles from '../styles/style.module.css'
 import {List} from '../interfaces'
+import {LabelList} from '../interfaces'
 import axios from 'axios';
 import { useForm } from 'react-hook-form'
 
-
 type Props = {
   items: List[]
+  datas:LabelList[]
 }
 
-export default function Home({items}: Props){
+export default function Home({items,datas}: Props){
   const { register, handleSubmit, errors, reset } = useForm();
   async function onSubmitForm(values: JSON){
     try{
@@ -131,7 +132,9 @@ export default function Home({items}: Props){
             <div className={styles.tags}>
                 <p>Tags</p>
                 <div className={styles.spans}>
-                  <span>web</span>
+                {datas.map((item)=> (
+                  <span key={item.id} >{item.name}</span>
+                ))}
                 </div>
             </div>
             <div className={styles.button}>
@@ -148,8 +151,12 @@ export default function Home({items}: Props){
 };
 
 export const getServerSideProps: GetServerSideProps = async () =>{
+  const labels = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/getLabels`)
+  const datas: LabelList[] = await labels.data;
+
   const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/boards`);
   const items: List[] = await response.data;
-  return {props: {items}}
+
+  return {props: {items,datas}}
 };
 
