@@ -1,41 +1,37 @@
-# TypeScript Next.js example
+<h1 align="center">Trello API</h1>
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## Sobre o [Trello API](https://trelloapi.vercel.app/)
 
-## Deploy your own
+O [Trello API](https://trelloapi.vercel.app/) tem o objetivo de criar um card nesse board publico do Trello https://trello.com/b/QRd8atbf/challengeslideworks.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Tecnologias
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
-## How to use it?
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+<br>
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
+## Instalação e uso
+Acesse por este link: https://trelloapi.vercel.app/ ou se preferir rodar em sua máquina:
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
+# Abra um terminal e copie este repositório com o comando
+$ git clone https://github.com/thalesantana/trelloapi
+# ou use a opção de download.
+
+# Entre na pasta web com 
+$ cd trelloapi
+
+# Instale as dependências
+$ npm install
+
+# Rode o aplicação
+$ npm run dev
+
+# Acesse em seu navegador o link
+http://localhost:3000
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+<br>
