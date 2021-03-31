@@ -16,7 +16,6 @@ export default async function(req: NextApiRequest, res: NextApiResponse){
                   return response.json();
               })
               .then((data) => {
-                
                   resolve(res.status(200).json(data));
                   })
               .catch(err =>{ 

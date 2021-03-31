@@ -29,8 +29,9 @@ export default function Home({items,datas}: Props){
     }catch(err){
       console.log(err)
     }
+    
   }
-
+  
   return(
     <form action="POST" onSubmit={handleSubmit(onSubmitForm)}>
 
@@ -120,7 +121,7 @@ export default function Home({items,datas}: Props){
         <div className={styles.column}> 
           <div >
             <input 
-              disabled
+              ref={register}
               type="text" 
               name="text" 
               className={styles.inputLabel}
