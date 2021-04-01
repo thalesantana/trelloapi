@@ -121,10 +121,19 @@ export default function Home({items,datas}: Props){
         <div className={styles.column}> 
           <div >
             <input 
-              ref={register}
-              type="text" 
-              name="text" 
               className={styles.inputLabel}
+              ref={register({
+                minLength:{
+                  value:1,
+                  message: "This is not long enough to be comment"
+                },
+                maxLength:{
+                  value:120,
+                  message:'This is too long'
+                },
+              })} 
+              type="text" 
+              name="text"
               placeholder="Type a comment.."
             />
           </div>
