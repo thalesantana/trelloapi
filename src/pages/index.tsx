@@ -6,6 +6,7 @@ import {LabelList} from '../interfaces'
 import axios from 'axios';
 import { useForm } from 'react-hook-form'
 
+
 type Props = {
   items: List[]
   datas:LabelList[]
@@ -136,6 +137,7 @@ export default function Home({items,datas}: Props){
               name="text"
               placeholder="Type a comment.."
             />
+            <span className={styles.error}>{errors?.text?.message}</span>
           </div>
 
           <div className={styles.divButton}>
