@@ -1,12 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function(req: NextApiRequest, res: NextApiResponse){
-  return new Promise(resolve => {
+  return  new Promise(async resolve => {
     try {
       const {method} = req;
-      switch (method) {
+        switch (method) {
         case 'GET':
-          fetch('https://api.trello.com/1/boards/QRd8atbf/labels', {
+            await fetch('https://api.trello.com/1/boards/QRd8atbf/labels', {
               method: 'GET',
               headers: {
                   'Accept': 'application/json'
